@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+    background-color: #7c4b4b;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    /* border: 2px solid red; */
+    width: 370px;
+    height: 100vh;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #704444, #855050);
+    box-shadow:  5px 5px 4px #633c3c,
+             -5px -5px 4px #6e3939;
+}
+
+input {
+    grid-column: span 4;
+    font-size: 2em;
+    width: 100%;
+    margin: 30px 10px 30px 5px;
+    /* border-radius: 30px; */
+    border: none;
+    border-radius: 23px;
+    background: #7c4b4b;
+    box-shadow: inset -5px -5px 4px #633c3c,
+            inset 5px 5px 4px #955a5a;
+    text-align: right;
+    user-select: none;
+    cursor: pointer;
+    caret-color: transparent;
+    color: #ae9c9c;
+}
+
+button {
+    font-size: 1.5em;
+    border-radius: 50%;
+    color: #ae9c9c;
+    background: linear-gradient(225deg, #855050, #704444);
+    box-shadow:  -5px 5px 10px #563131,
+             5px -5px 10px #844e4e;
+    border: none;
+    margin: 10px 10px 10px 15px;
+    cursor: pointer;
+}
+
+
+#cancel{
+    grid-column: span 2;
+    border-radius: 20px;
+    background: #950606;
+}
+
+#plus {
+    grid-row: span 2;
+    border-radius: 20px;
+    background: #145b14;
+}
+
+#equal {
+    grid-column: span 3;
+    border-radius: 20px;
+    background: #111186;
+}
+
+button:active{
+    box-shadow:  inset -5px 5px 10px #563131,
+             inset 5px -5px 10px #844e4e;
+    color: #881a1a;
+    font-weight: 600;
+}
+
+#cancel:active{
+    box-shadow: inset -5px 5px 10px #740707,
+             inset 5px -5px 10px #790c0c;
+    color: black;
+}
+
+#plus:active {
+    box-shadow: inset -5px 5px 10px #084508,
+             inset 5px -5px 10px #0c4d0c;
+    color: yellow;
+}
+
+#equal:active{
+    box-shadow: inset -5px 5px 10px #06065f,
+             inset 5px -5px 10px #0e0e5a;
+    color: aqua;
+}
+
+@media only screen and (max-width: 400px) {
+    .calculator{
+        width: 300px;
+        grid-template-columns: repeat(4, 75px);
+    }
+
+    input{
+        width: 290px;
+    }
+
+}
